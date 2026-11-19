@@ -20,7 +20,7 @@ The model is a two-branch NoisyDQN. The 14-dimensional state vector is split int
 
 ```bash
 git clone https://github.com/vvs0713/chrome_dino_RL_agent.git
-cd dino-noisydqn
+cd chrome_dino_RL_agent
 pip install -r requirements.txt
 ```
 ---
