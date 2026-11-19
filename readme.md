@@ -19,7 +19,7 @@ The model is a two-branch NoisyDQN. The 14-dimensional state vector is split int
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/dino-noisydqn.git
+git clone https://github.com/vvs0713/chrome_dino_RL_agent.git
 cd dino-noisydqn
 pip install -r requirements.txt
 ```
@@ -73,13 +73,9 @@ python train.py -te 1000 -ts 100 -us 10 -t 10
 
 ## Limitations
 
-
-
 Screen resolution and DPR
 
     DPR ≠ 1 breaks window positioning. driver.execute_script("return screen.width;") returns CSS pixels, while mss captures physical pixels. On HiDPI displays (macOS Retina, Windows 125%/150%/200% scaling, some Linux setups) the browser window ends up in a different physical position than the code assumes, and the crop drifts off the canvas.
-
-
 
     On a 4K screen this downscales by 0.5× and blurs thin obstacles, which degrades argmin / argmax-based distance detection. On a smaller screen it upscales and introduces interpolation artifacts.
 
@@ -87,11 +83,11 @@ OS and display server
 
     Tested only on Ubuntu with X11.
 
-        options.add_argument("--ozone-platform=x11") is Linux-specific and assumes an X11 session.
+    options.add_argument("--ozone-platform=x11") is Linux-specific and assumes an X11 session.
 
-        Wayland is not supported: pyautogui and Selenium's set_window_rect behave differently (or fail) under Wayland.
+    Wayland is not supported: pyautogui and Selenium's set_window_rect behave differently (or fail) under Wayland.
 
-        Windows and macOS were not tested. They may work for the browser part, but pyautogui keyboard emulation and window positioning are platform-dependent, and the game-area coordinates will need re-tuning.
+    Windows and macOS were not tested. They may work for the browser part, but pyautogui keyboard emulation and window positioning are platform-dependent, and the game-area coordinates will need re-tuning.
 
     Requires an interactive desktop session. pyautogui sends real keyboard events, so the script must run in a graphical session (or under xvfb-run on a headless server).
 
