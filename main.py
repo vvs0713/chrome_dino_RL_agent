@@ -30,7 +30,6 @@ def main() -> int:
     
     policy_net = NoisyDQNNet()
     checkpoint = torch.load('net/weights/model_dqn_noise.pt')
-    #checkpoint = torch.load('/media/mainuser/DATA/RL/DinoGame/weights/model_dqn_noise_N_epoch.pt')
  
     policy_net.load_state_dict(checkpoint['model_state_dict'])
     policy_net.eval()
