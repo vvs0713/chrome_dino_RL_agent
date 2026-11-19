@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+net/weights/model_dqn_noise (Copy).pt
+net/weights/model_dqn_noise_N_epoch.pt
